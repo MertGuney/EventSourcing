@@ -26,5 +26,10 @@
                 logger.LogError(args.Exception.Message);
             };
         }
+
+        public static void AddServices(this IServiceCollection services)
+        {
+            services.AddSingleton<ProductStream>();
+        }
     }
 }

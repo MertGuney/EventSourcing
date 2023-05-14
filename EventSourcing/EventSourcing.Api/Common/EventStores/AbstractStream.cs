@@ -1,8 +1,4 @@
-﻿using EventStore.ClientAPI;
-using System.Text;
-using System.Text.Json;
-
-namespace EventSourcing.Api.Common.EventStores
+﻿namespace EventSourcing.Api.Common.EventStores
 {
     public abstract class AbstractStream
     {

@@ -1,6 +1,11 @@
-﻿global using EventSourcing.Api.DTOs.Products;
+﻿global using EventSourcing.Api.Common.EventStores;
+global using EventSourcing.Api.DTOs.Products;
 global using EventSourcing.Api.Events.Common.Interfaces;
+global using EventSourcing.Api.Events.Products;
 global using EventSourcing.Api.Extensions;
+global using EventSourcing.Api.Streams.Products;
 global using EventStore.ClientAPI;
 global using MediatR;
 global using System.Reflection;
+global using System.Text;
+global using System.Text.Json;
