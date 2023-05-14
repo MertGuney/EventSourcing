@@ -1,6 +1,4 @@
-﻿using EventSourcing.Api.Events.Common.Interfaces;
-
-namespace EventSourcing.Api.Events.Products
+﻿namespace EventSourcing.Api.Events.Products
 {
     public class ProductCreatedEvent : IEvent
     {
