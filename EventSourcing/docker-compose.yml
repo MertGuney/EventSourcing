@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  eventstore.db:
+    image: eventstore/eventstore:21.10.0-buster-slim
+
+volumes:
+  eventstore-volume-data:
+  eventstore-volume-logs:
