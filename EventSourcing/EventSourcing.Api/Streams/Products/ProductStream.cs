@@ -2,6 +2,7 @@
 {
     public class ProductStream : AbstractStream
     {
+        public static string GroupName => "agroup";
         public static string StreamName => "ProductStream";
         public ProductStream(IEventStoreConnection eventStoreConnection) : base(StreamName, eventStoreConnection) { }
 

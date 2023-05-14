@@ -1,4 +1,5 @@
 ﻿using EventSourcing.Api.Data;
+using EventSourcing.Api.Services.Backgrounds;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventSourcing.Api.Extensions
@@ -33,6 +34,7 @@ namespace EventSourcing.Api.Extensions
         public static void AddServices(this IServiceCollection services)
         {
             services.AddSingleton<ProductStream>();
+            services.AddHostedService<ProductReadModelEventStore>();
         }
 
         public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
