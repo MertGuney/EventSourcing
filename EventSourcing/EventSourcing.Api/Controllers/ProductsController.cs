@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EventSourcing.Api.Features.Queries.Products;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EventSourcing.Api.Controllers
 {
@@ -11,6 +12,12 @@ namespace EventSourcing.Api.Controllers
         public ProductsController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetAllByUserId(Guid userId)
+        {
+            return Ok(await _mediator.Send(new GetAllProductsByUserIdQuery() { UserId = userId }));
         }
 
         [HttpPost]
