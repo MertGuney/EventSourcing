@@ -1,4 +1,7 @@
-﻿namespace EventSourcing.Api.Extensions
+﻿using EventSourcing.Api.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace EventSourcing.Api.Extensions
 {
     public static class ServiceExtension
     {
@@ -30,6 +33,11 @@
         public static void AddServices(this IServiceCollection services)
         {
             services.AddSingleton<ProductStream>();
+        }
+
+        public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddDbContext<AppDbContext>(opts => opts.UseSqlServer(configuration.GetConnectionString("SqlConnection")));
         }
     }
 }
