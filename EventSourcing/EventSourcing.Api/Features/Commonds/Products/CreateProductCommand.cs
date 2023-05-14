@@ -1,4 +1,4 @@
-﻿namespace EventSourcing.Api.Commonds.Products
+﻿namespace EventSourcing.Api.Features.Commonds.Products
 {
     public class CreateProductCommand : IRequest
     {
